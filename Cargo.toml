@@ -1,0 +1,19 @@
+[package]
+name = "rusty-deser"
+version = "1.0.0"
+edition = "2021"
+description = "High-performance, zero-allocation binary deserialization engine with safety-first design."
+license = "MIT"
+repository = "https://github.com/programerweb1985/rusty-deser"
+keywords = ["deserialization", "binary", "parsing", "no-std", "performance"]
+categories = ["parsing", "encoding"]
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+overflow-checks = false
+
+[dev-dependencies]
